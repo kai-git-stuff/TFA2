@@ -25,15 +25,17 @@ import tensorflow as tf
 
 import sys, os
 
-sys.path.append("../")
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))+"/AmpliTF")
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+print(sys.path)
 # os.environ["CUDA_VISIBLE_DEVICES"] = ""   # Do not use GPU
 
 import amplitf.interface as atfi
 import amplitf.kinematics as atfk
 import amplitf.dynamics as atfd
-import amplitf.toymc as tft
+import tfa.toymc as tft
 import amplitf.likelihood as atfl
-import amplitf.optimisation as atfo
+import tfa.optimisation as atfo
 from amplitf.phasespace.dalitz_phasespace import DalitzPhaseSpace
 
 # Import TFA modules
